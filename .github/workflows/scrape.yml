@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "Scraper Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add hauling_data_*.csv
+          git add archive/hauling_data_*.csv
           # If there is no new data, git commit will fail. The || exit 0 prevents the workflow from crashing.
           git commit -m "Automated data backup" || exit 0
           git push
