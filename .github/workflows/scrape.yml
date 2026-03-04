@@ -2,9 +2,8 @@ name: Hauling Data Scraper
 
 on:
   schedule:
-    - cron: '0 * * * *'     # Runs every hour at the top of the hour
-    - cron: '50 23 * * *'   # Runs at 6:50 AM WIB (23:50 UTC)
-  workflow_dispatch:        # Gives you a manual "Run" button to test it
+    - cron: '15 0 * * *'     # Runs once daily at 7:15 AM WIB (00:15 UTC)
+  workflow_dispatch:
 
 jobs:
   scrape-and-save:
