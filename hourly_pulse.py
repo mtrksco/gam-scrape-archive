@@ -38,7 +38,7 @@ def generate_dashboard():
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Hauling Pulse Dashboard</title>
+            <title>SUM Hourly Hauling Dashboard</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
                 body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 20px; background-color: #f4f4f9; color: #333; }}
@@ -54,7 +54,7 @@ def generate_dashboard():
         </head>
         <body>
             <div class="container">
-                <h1>Hauling Operations Pulse</h1>
+                <h1>SUM Hourly Operations Dashboard</h1>
                 <div class="timestamp">Last Updated: {now_wib.strftime('%Y-%m-%d %H:%M')} WIB</div>
                 
                 <div class="summary-box">
@@ -79,6 +79,10 @@ def generate_dashboard():
                     <tr><th>Unit</th><th>Trips</th><th>Tons</th></tr>
                     {''.join(f'<tr><td>{u}</td><td>{int(r["Trips"])}</td><td>{r["Tonnage"]:,.2f}</td></tr>' for u, r in all_units_stats.iterrows())}
                 </table>
+                <div class="footer">
+                    <p>⚙️ <a href="https://github.com/mtrksco/gam-scrape-archive/actions" target="_blank">Access GitHub Actions</a> to check logs or manually sync data.</p>
+                    <p>&copy; {now_wib.strftime('%Y')} ©2026 Kim Ha Technologies. All systems operational.</p>
+                </div>
             </div>
         </body>
         </html>
