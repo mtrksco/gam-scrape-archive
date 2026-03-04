@@ -2,7 +2,7 @@ name: Hourly Pulse Dashboard
 
 on:
   schedule:
-    - cron: '0 1-15 * * *' # Hourly
+    - cron: '17 1-15 * * *' # Hourly
   workflow_dispatch:
 
 jobs:
