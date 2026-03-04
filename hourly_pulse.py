@@ -81,7 +81,7 @@ def generate_dashboard():
                 </table>
                 <div class="footer">
                     <p>⚙️ <a href="https://github.com/mtrksco/gam-scrape-archive/actions" target="_blank">Access GitHub Actions</a> to check logs or manually sync data.</p>
-                    <p>&copy; {now_wib.strftime('%Y')} ©2026 Kim Ha Technologies. All systems operational.</p>
+                    <p>&copy; {now_wib.strftime('%Y')} Kim Ha Technologies. All systems operational.</p>
                 </div>
             </div>
         </body>
