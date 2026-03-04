@@ -14,9 +14,13 @@ def extract_yesterdays_hauling():
     # Format dates for the URL and the filename
     url_date = target_date.strftime('%Y%m%d')
     file_date = target_date.strftime('%Y-%m-%d')
+
+    # NEW: Define the folder and ensure it exists
+    folder_name = "archive"
+    os.makedirs(folder_name, exist_ok=True)
     
     URL = f"https://nb.ptgam.com/?hauling={url_date}&id=6f48a9b09bc4a0a83cd52e6b5a3c6d31c9fcff5a945add5721038fb201a8742a"
-    filename = f"hauling_data_{file_date}.csv"
+    filename = f"{folder_name}/hauling_data_{file_date}.csv"
 
     print(f"[{now_wib}] Initiating extraction for Kim. Target Date: {file_date}")
     
